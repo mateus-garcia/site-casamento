@@ -1,0 +1,17 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Dependency directories (if using npm/yarn)
+node_modules/
+
+# Build/output directories
+dist/
+build/
+
+# Editor settings
+.vscode/
+.idea/

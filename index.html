@@ -22,6 +22,10 @@
         .monogram {
             font-family: 'Great Vibes', cursive;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 
 </head>
@@ -58,9 +62,22 @@
 
 <body class="flex items-center justify-center min-h-screen text-gray-700">
 
-    <div class="text-center max-w-2xl px-6">
+    <nav class="fixed top-0 left-0 w-full bg-white/80 backdrop-blur-sm border-b border-gray-200">
+        <div
+            class="max-w-5xl mx-auto px-6 py-4 flex justify-center gap-8 text-sm tracking-[0.25em] uppercase text-gray-600">
 
-        <p class="tracking-[0.4em] text-sm mb-10 text-gray-500">
+            <a href="#inicio" class="hover:text-black">Início</a>
+            <a href="#local" class="hover:text-black">Local</a>
+            <a href="#contato" class="hover:text-black">Contato</a>
+            <a href="#rsvp" class="hover:text-black">RSVP</a>
+
+        </div>
+    </nav>
+
+    <!-- <section id="inicio" class="flex items-center justify-center min-h-screen text-gray-700 pt-24"> -->
+    <div class="text-center max-w-2xl px-6" id="inicio">
+
+        <p class="tracking-[0.4em] text-sm mb-10 mt-8 text-gray-500">
             SAVE THE DATE
         </p>
 
@@ -77,34 +94,95 @@
         </p>
 
         <div class="flex justify-center gap-8 text-center mb-6">
-        
+
             <div>
                 <div id="days" class="text-3xl font-light">0</div>
                 <div class="text-xs tracking-[0.3em] text-gray-500">Dias</div>
             </div>
-        
+
             <div>
                 <div id="hours" class="text-3xl font-light">0</div>
                 <div class="text-xs tracking-[0.3em] text-gray-500">Horas</div>
             </div>
-        
+
             <div>
                 <div id="minutes" class="text-3xl font-light">0</div>
                 <div class="text-xs tracking-[0.3em] text-gray-500">Minutos</div>
             </div>
-        
+
             <div>
                 <div id="seconds" class="text-3xl font-light">0</div>
                 <div class="text-xs tracking-[0.3em] text-gray-500">Segundos</div>
             </div>
-        
+
         </div>
 
         <p class="tracking-[0.3em] text-gray-500">
             Canela — RS
         </p>
 
+        <section id="local" class="py-24 text-center">
+        
+            <h2 class="text-3xl mb-6">Local</h2>
+            
+            <p class="text-gray-700 text-lg">
+                Grande Hotel Canela
+            </p>
+            
+            <p class="text-gray-500 mb-10">
+                Canela – RS
+            </p>
+            
+            <div class="max-w-3xl mx-auto rounded-xl overflow-hidden shadow-lg">
+            
+                <iframe src="https://www.google.com/maps?q=Grande+Hotel+Canela&output=embed" width="90%" height="150"
+                    style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            
+            </div>
+            
+            <p class="mt-6">
+                <a href="https://maps.app.goo.gl/hFyo8bNJKKq65J5t6" target="_blank"
+                    class="underline text-gray-600 hover:text-black">
+                    Abrir no Google Maps
+                </a>
+            </p>
+        
+        </section>
+        
+        <section id="contato">
+        
+            <h2 class="text-3xl mb-6">Contato</h2>
+        
+            <p class="text-gray-600">
+                Em caso de dúvidas, entre em contato conosco.
+            </p>
+        
+            <p class="mt-4">
+                <a href="https://wa.me/55XXXXXXXXXXX" class="underline">
+                    WhatsApp
+                </a>
+            </p>
+        
+        </section>
+
+        <section id="rsvp" class="py-24 text-center">
+        
+            <h2 class="text-3xl mb-6">RSVP</h2>
+        
+            <p class="text-gray-600">
+                Confirme sua presença.
+            </p>
+        
+            <button class="mt-6 px-6 py-3 border border-gray-700 hover:bg-gray-700 hover:text-white transition">
+                Confirmar presença
+            </button>
+        
+        </section>
+
     </div>
+    <!-- </section> -->
+    
 
 </body>
 

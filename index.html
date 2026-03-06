@@ -26,6 +26,36 @@
 
 </head>
 
+<script>
+
+    const weddingDate = new Date("2026-10-03T16:00:00-03:00");
+
+    function updateCountdown() {
+
+        const now = new Date();
+        const diff = weddingDate - now;
+
+        if (diff <= 0) {
+            return;
+        }
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+    }
+
+    setInterval(updateCountdown, 1000);
+
+    updateCountdown();
+
+</script>
+
 <body class="flex items-center justify-center min-h-screen text-gray-700">
 
     <div class="text-center max-w-2xl px-6">
@@ -45,6 +75,30 @@
         <p class="text-2xl tracking-[0.3em] mb-6">
             03 · 10 · 2026
         </p>
+
+        <div class="flex justify-center gap-8 text-center mb-6">
+        
+            <div>
+                <div id="days" class="text-3xl font-light">0</div>
+                <div class="text-xs tracking-[0.3em] text-gray-500">Dias</div>
+            </div>
+        
+            <div>
+                <div id="hours" class="text-3xl font-light">0</div>
+                <div class="text-xs tracking-[0.3em] text-gray-500">Horas</div>
+            </div>
+        
+            <div>
+                <div id="minutes" class="text-3xl font-light">0</div>
+                <div class="text-xs tracking-[0.3em] text-gray-500">Minutos</div>
+            </div>
+        
+            <div>
+                <div id="seconds" class="text-3xl font-light">0</div>
+                <div class="text-xs tracking-[0.3em] text-gray-500">Segundos</div>
+            </div>
+        
+        </div>
 
         <p class="tracking-[0.3em] text-gray-500">
             Canela — RS

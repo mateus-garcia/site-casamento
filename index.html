@@ -179,7 +179,7 @@
         
         </section>
 
-        <section id="local" class="py-24 text-center">
+        <section id="local" class="py-24 text-center max-w-xl mx-auto px-4 sm:px-6">
         
             <h2 class="text-3xl mb-6">Local</h2>
             
@@ -213,7 +213,7 @@
         
         </section>
 
-        <section id="indicacoes" class="py-24 text-center">
+        <section id="indicacoes" class="py-24 text-center max-w-xl mx-auto px-4 sm:px-6">
         
             <h2 class="text-3xl mb-10">Indicações</h2>
 
@@ -302,7 +302,7 @@
         
         </section> -->
 
-        <section id="rsvp" class="py-24 text-center max-w-xl mx-auto">
+        <section id="rsvp" class="py-24 text-center max-w-xl mx-auto px-4 sm:px-6">
         
             <h2 class="text-3xl mb-6">RSVP</h2>
         
@@ -350,7 +350,12 @@
         var swiper = new Swiper(".mySwiper", {
             loop: true,
             centeredSlides: true,
-            slidesPerView: 3,
+            slidesPerView: 2,
+              breakpoints: {
+                1024: {
+                    slidesPerView: 4
+                }
+            },
             spaceBetween: 0,
             speed: 700,
             autoplay: {
